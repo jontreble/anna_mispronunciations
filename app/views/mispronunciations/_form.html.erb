@@ -1,0 +1,25 @@
+<%= form_for(@mispronunciation) do |f| %>
+  <% if @mispronunciation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mispronunciation.errors.count, "error") %> prohibited this mispronunciation from being saved:</h2>
+
+      <ul>
+      <% @mispronunciation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mispronunciation %><br />
+    <%= f.text_field :mispronunciation %>
+  </div>
+  <div class="field">
+    <%= f.label :corrected_pronunciation %><br />
+    <%= f.text_field :corrected_pronunciation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

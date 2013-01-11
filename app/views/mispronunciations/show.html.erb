@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Mispronunciation:</b>
+  <%= @mispronunciation.mispronunciation %>
+</p>
+
+<p>
+  <b>Corrected pronunciation:</b>
+  <%= @mispronunciation.corrected_pronunciation %>
+</p>
+
+
+<%= link_to 'Edit', edit_mispronunciation_path(@mispronunciation) %> |
+<%= link_to 'Back', mispronunciations_path %>

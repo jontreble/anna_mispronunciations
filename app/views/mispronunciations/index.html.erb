@@ -1,0 +1,25 @@
+<h1>Listing mispronunciations</h1>
+
+<table>
+  <tr>
+    <th>Mispronunciation</th>
+    <th>Corrected pronunciation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mispronunciations.each do |mispronunciation| %>
+  <tr>
+    <td><%= mispronunciation.mispronunciation %></td>
+    <td><%= mispronunciation.corrected_pronunciation %></td>
+    <td><%= link_to 'Show', mispronunciation %></td>
+    <td><%= link_to 'Edit', edit_mispronunciation_path(mispronunciation) %></td>
+    <td><%= link_to 'Destroy', mispronunciation, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mispronunciation', new_mispronunciation_path %>
